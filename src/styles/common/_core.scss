@@ -1,0 +1,37 @@
+@import '../lib';
+
+html {
+  font-size: $root-font-size;
+  color: color(black, 2);
+}
+
+body {
+  background: #fff;
+  font-family: $root-font-family;
+  @include font(body-1);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+video,
+object,
+embed {
+  display: block;
+  max-width: 100%;
+}
+
+.margin-center { @include margin-center; }
+.disabled { pointer-events: none; }

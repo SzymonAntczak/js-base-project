@@ -1,0 +1,96 @@
+$root-font-size: 16px;
+$root-font-family: 'Nunito Sans', sans-serif;
+
+$font-weight: (
+  regular: 400,
+  semibold: 600,
+  bold: 700,
+  black: 900
+);
+
+$colors-stack: (
+	black:  (#000000, #242424),
+  white:  (#ffffff, #ffffff),
+  gray:   (#F9F9F9, #ECECEC, #999999, #1A1A1A, #666666),
+  red:    (#D22929, #D22929),
+  blue: (#173885, #292d54, #4270A5, #334B8D),
+  orange: (#FF7645, #FF7645),
+  yellow: (#FFB03A),
+  green: (#0A8E1C, #3A8F0F)
+);
+$txt-colors-stack: (black, white, gray, red, blue, orange);
+
+$notification-colors-stack: (
+	success:  (#0A8E1C, #077516),
+  info:     (#173885, #173885),
+  warning:  (#EB9F34, #C2852E),
+  error:    (#F4282D, #B72327)
+);
+$txt-notification-colors-stack: (success, info, warning, error);
+
+$typography-default-stack: (
+//name: (           size,   weight,   line-height,  color: inherit,  tone: 1,    letterspacing: 0, text-transform: none)
+  hero-1: (            64,    black,        65,           inherit,          1,         0,               none),
+  hero-2: (            46,    black,        45,           inherit,          1,         0,               none),
+  headline-1: (        28,    black,        36,           inherit,          1,         0,               none),
+  headline-2: (        24,    black,        32,           inherit,          1,         0,               none),
+  headline-3: (        23,    black,        31,           inherit,          1,         0,               none),
+  title-1: (           18,    black,        24,           inherit,          1,         0,               none),
+  title-2: (           15,    black,        22,           inherit,          1,         0,               none),
+  subtitle: (          15,    bold,           22,           inherit,          1,         0,               none),
+  body-1: (            15,    regular,        22,           inherit,          1,         0,               none),
+  body-2: (            14,    bold,           22,           inherit,          1,         0,               none),
+  body-3: (            14,    regular,        22,           inherit,          1,         0,               none),
+  caption-1: (         13,    bold,           21,           inherit,          1,         0,               none),
+  caption-2: (         12,    black,        18,           inherit,          1,         0,               none),
+  caption-3: (         12,    bold,           18,           inherit,          1,         0,               none),
+  caption-4: (         12,    semibold,       18,           inherit,          1,         0,               none),
+  overline:  (         12,    regular,        18,           inherit,          1,         0,               none)
+);
+
+$txt-typography-stack: (hero-1, hero-2, headline-1, headline-2, headline-3, title-1, title-2, subtitle, body-1, body-2, body-3, caption-1, caption-2, caption-3, caption-4, overline);
+
+$breakpoints: (
+  desktop-devices: 1800px,
+  laptop-devices: 1366px,
+  laptop-small-devices: 1280px,
+  tablet-devices: 1024px,
+  tablet-small-devices: 768px,
+  phone-devices: 500px,
+  phone-small-devices: 320px
+);
+
+$rwd-typography: (
+  default: $typography-default-stack
+);
+
+$z-index-areas: (
+  workspace: 1,
+  workspace-cover: 5,
+  workspace-overlay: 35,
+  navbar: 50,
+  navbar-cover: 55,
+  overlay: 99,
+  modal: 100,
+  toast: 150,
+  fullscreen: 200,
+  topLayer: 99999,
+);
+
+// Times
+$time-fastest: 0.3s;
+$time-fast: 0.5s;
+$time-normal: 1s;
+$time-slow: 2s;
+$time-slowest: 3s;
+
+$grid-content-size: map-get($breakpoints, laptop-small-devices);
+
+$desktop-section-gap: 48px;
+$tablet-section-gap: 32px;
+$mobile-section-gap: 16px;
+
+$base-grid-gap: $tablet-section-gap;
+$mobile-grid-gap: $mobile-section-gap;
+
+$tile-zoom-scale: 1.02;

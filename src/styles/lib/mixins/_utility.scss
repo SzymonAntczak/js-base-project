@@ -1,0 +1,92 @@
+/// Ustawienie wielkości elementu
+///
+/// @group mixin utility
+///
+/// @param {Length} $width - Element's width
+/// @param {Length} $height [$width] - Element's height
+///
+/// @example scss - Sizing `.foo`
+///   .foo {
+///     @include size(30px, 50px);
+///   }
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// Wycentrowanie elementu
+///
+/// @group mixin utility
+///
+///
+/// @example Center `div`
+///   div {
+///     @include center();
+///   }
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/// Ustawienie elementu jako flex
+///
+/// @group mixin utility
+///
+/// @param {Length} $fd - [row] flex direction
+/// @param {Length} $jc [flex-start] justify content
+/// @param {Length} $ai [center] align items
+///
+/// @example Center `div`
+///   div {
+///     @include flex();
+///   }
+@mixin flex($fd: row, $jc: flex-start, $ai: flex-start) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+/// Wyśrodkowanie elementu
+///
+/// @group mixin utility
+///
+///
+/// @example Center `div`
+///   div {
+///     @include margin-center();
+///   }
+@mixin margin-center {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+/// Ostylowanie input placeholder
+///
+/// @group mixin utility
+///
+/// @example Style `::placeholder`
+///   input {
+///     @include input-placeholder() {
+///       color: white;
+///       font-size: 15px;
+///     };
+///   }
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+/// Nadanie border-radius na górze elementu
+///
+/// @group mixin utility
+///
+/// @param {Value} $radii - wartość w px
